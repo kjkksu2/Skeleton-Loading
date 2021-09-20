@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 350px;
+  min-height: 550px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  display: grid;
+  grid-template-rows: 200px 1fr 0.2fr;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-info {
+  margin: 10px 0px;
+}
+
+.card-info .name {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.card-mediaIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-mediaIcons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.card-mediaIcons a:not(:last-child) {
+  margin-right: 20px;
+}
+
+.card-mediaIcons a i {
+  font-size: 1.2em;
+  color: #666;
+  transition: 0.3s ease;
+}
+
+.card-mediaIcons a:hover i {
+  transform: scale(1.2);
+  color: #000;
+}
+
+.card-image img,
+.card-info .name span,
+.card-info .text p,
+.card-mediaIcons a i {
+  visibility: hidden;
+}
+
+.loading {
+  position: relative;
+  background: #e2e2e2;
+  overflow: hidden;
+}
+
+.loading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
