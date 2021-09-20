@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Skeleton Loading</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <section class="card">
+        <article class="card-image loading">
+          <img src="pictures/bird.jpg" />
+        </article>
+        <article class="card-info">
+          <h2 class="name loading"><span>Alcedo atthis</span></h2>
+          <div class="text loading">
+            <p>
+              The common kingfisher, also known as the Eurasian kingfisher and
+              river kingfisher, is a small kingfisher with seven subspecies
+              recognized within its wide distribution across Eurasia and North
+              Africa. It is resident in much of its range, but migrates from
+              areas where rivers freeze in winter.
+            </p>
+          </div>
+        </article>
+        <article class="card-mediaIcons">
+          <a href="#" class="loading"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="loading"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="loading"><i class="fab fa-twitter"></i></a>
+        </article>
+      </section>
+      <section class="card">
+        <article class="card-image loading">
+          <img src="pictures/fox.jpg" />
+        </article>
+        <article class="card-info">
+          <h2 class="name loading"><span>Vulpes vulpes</span></h2>
+          <div class="text loading">
+            <p>
+              The red fox is the largest of the true foxes and one of the most
+              widely distributed members of the order Carnivora, being present
+              across the entire Northern Hemisphere including most of North
+              America, Europe and Asia, plus parts of North Africa.
+            </p>
+          </div>
+        </article>
+        <article class="card-mediaIcons">
+          <a href="#" class="loading"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="loading"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="loading"><i class="fab fa-twitter"></i></a>
+        </article>
+      </section>
+      <section class="card">
+        <article class="card-image loading">
+          <img src="pictures/turtle.jpg" />
+        </article>
+        <article class="card-info">
+          <h2 class="name loading"><span>Chelonioidea</span></h2>
+          <div class="text loading">
+            <p>
+              Sea turtles, sometimes called marine turtles, are reptiles of the
+              order Testudines and of the suborder Cryptodira. The seven
+              existing species of sea turtles are the green sea turtle,
+              loggerhead sea turtle, Kemp's ridley sea turtle, olive ridley sea
+              turtle, hawksbill sea turtle, flatback sea turtle, and leatherback
+              sea turtle.
+            </p>
+          </div>
+        </article>
+        <article class="card-mediaIcons">
+          <a href="#" class="loading"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="loading"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="loading"><i class="fab fa-twitter"></i></a>
+        </article>
+      </section>
+    </div>
+  </body>
+  <script>
+    const loading = document.querySelectorAll(".loading");
+    const cardImages = document.querySelectorAll(".card-image img");
+    const cardNames = document.querySelectorAll(".card-info .name span");
+    const cardTexts = document.querySelectorAll(".card-info .text p");
+    const cardIcons = document.querySelectorAll(".card-mediaIcons a i");
+
+    const showCards = () => {
+      loading.forEach((load) => {
+        load.classList.remove("loading");
+      });
+      cardImages.forEach((img) => {
+        img.style.visibility = "visible";
+      });
+      cardNames.forEach((name) => {
+        name.style.visibility = "visible";
+      });
+      cardTexts.forEach((text) => {
+        text.style.visibility = "visible";
+      });
+      cardIcons.forEach((icon) => {
+        icon.style.visibility = "visible";
+      });
+    };
+
+    setTimeout(showCards, 4000);
+  </script>
+</html>
